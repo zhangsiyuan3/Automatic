@@ -1,0 +1,26 @@
+function parseint(num) {  //外教列表页展示整数
+  return parseInt(num);
+}
+function decodeUrlComponent(text) { //text解码，解决文字不显示Emoji表情不显示问题
+  return decodeURIComponent(text);
+}
+function chartVoice(t) { //聊天页，语音时间换算
+  var min = Math.floor(t / 1000 / 60 % 60);
+  var sec = Math.floor(t / 1000 % 60);
+  var str = min > 0 ? sec > 0 ? min + "'" + sec + '"' : min + "'" : sec + '"';
+  return str
+}
+function JSONparse(str) { //删除首末位字符串
+  return JSON.parse(str)
+}
+function extractTimeStamp(str) { //抽取时间戳
+  var reg = getRegExp('\D', 'g');
+  return +str.replace(reg, '')
+}
+module.exports = {
+  parseint: parseint,
+  decodeUrlComponent: decodeUrlComponent,
+  chartVoice: chartVoice,
+  JSONparse: JSONparse,
+  extractTimeStamp: extractTimeStamp
+};

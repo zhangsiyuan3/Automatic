@@ -1,0 +1,12 @@
+<!-- component/chartVoice/chartVoice.wxml -->
+<wxs src="../../utils/filter.wxs" module="filter" />
+<!-- 右边 -->
+<view bindtap='play' wx:if='{{isRight}}' class="right box">
+    <text>{{filter.chartVoice(currentTime)}}</text>
+    <image class="voice-image" mode="widthFix" src="/images/voice3.png" />
+</view>
+<!-- 左边 -->
+<view bindtap='play' wx:else class="left box">
+    <image class="voice-image" mode="widthFix" src="/images/voice3.png" />
+    <text>{{filter.chartVoice(currentTime)}}</text>
+</view>

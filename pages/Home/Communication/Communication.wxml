@@ -1,0 +1,60 @@
+<!-- <view wx:if='{{listData.length > pageSize && isOver}}' class="data-over">
+  没有更多信息了
+</view> -->
+<view class='wrapper'>
+  <!-- 右边  start -->
+  <view class='core'wx:for='{{listData}}' wx:key='{{index}}'>
+    <view wx:if='{{item.isTime}}' class='core-time'>{{item.showTime}}</view>
+    <view wx:if='{{item.CrdBeMySelf==1}}' class='core-me'>
+      <view class='core-box-me'>
+        <image wx:if="{{item.CrdMessageType === 1002}}" class="core-chart-image" mode="widthFix" src='{{Images+item.CrdChatMsg}}' catchtap='checkImage' data-src='{{item.CrdChatMsg}}'/>
+        <chart-voice wx:elif="{{item.CrdMessageType === 1003}}" bindaudiocreate='audioCreate' bindstopaudio='stopAudio' chartId='{{item.CrdId}}' isRight='{{true}}' message='{{item.CrdChatMsg}}'></chart-voice>
+        <view wx:else class='core-chart'>{{item.CrdChatMsg}}</view>
+        <view class='core-right' style="opacity: {{item.CrdMessageType === 1002 ? 0 : 1}}">
+          <view class='core-right-1'></view>
+          <view class='core-right-2'></view>
+        </view>
+      </view>
+      <image class='core-image' src='{{GetSystemInfo.UserHeadPortraitUrl}}'></image>
+    </view>
+    <!-- 左边  start -->
+    <view wx:if='{{item.CrdBeMySelf==0}}' class='core-you'>
+      <image bindtap='courseInfo' class='core-image' src='{{CustServerAva+GetSystemInfo.StCustServiceAvaUrl}}'></image>
+      <view class='core-box-you'>
+        <view class='core-left' style="opacity: {{item.CrdMessageType === 1002 ? 0 : 1}}">
+          <view class='core-left-1'></view>
+          <view class='core-left-2'></view>
+        </view>
+        <image wx:if="{{item.CrdMessageType === 1002}}" class="core-chart-image" mode="widthFix" src='{{Images+item.CrdChatMsg}}' catchtap='checkImage' data-src='{{item.CrdChatMsg}}'/>
+        <chart-voice wx:elif="{{item.CrdMessageType === 1003}}" bindaudiocreate='audioCreate' bindstopaudio='stopAudio' chartId='{{item.CrdId}}' isRight='{{false}}' message='{{item.CrdChatMsg}}'></chart-voice>
+        <view wx:else bindlongpress='longpress' data-index='{{index}}' class='core-chart'>
+          {{item.CrdChatMsg}}
+        </view>
+      </view>
+    </view>
+  </view>
+  <!-- <view id='wrap'></view> -->
+  <view class='footer'>
+    <image hidden='{{isRecord}}' bindtap='changeVoice' class="footer-voice" mode="widthFix" src="/images/Voice.png" />
+    <image hidden='{{!isRecord}}' bindtap='changeVoice' class="footer-voice" mode="widthFix" src="/images/keyboard.png" />
+    <view class="footer-input-box">
+      <input hidden='{{isRecord}}' bindconfirm='confirm' value='{{value}}' confirm-hold='{{false}}' adjust-position='{{true}}' confirm-type='send' cursor-spacing='{{18}}' type='text' placeholder='请输入...' placeholder-class='placeholder' maxlength='1000'></input>
+      <view hidden='{{!isRecord}}' bindtouchstart='recordStart' bindtouchend='recordEnd' bindtouchcancel='recordCancel' class="footer-voice-box">
+        按住 说话
+      </view>
+    </view>
+    <!-- <image bindtap='chooseImage' class="footer-add" mode="widthFix" src="/images/picture.png" /> -->
+  </view>
+</view>
+<view bindtouchmove='move' bindtap='move' hidden='{{!isLayer}}' class='layer'>
+  <view style='margin-top:{{layerH}}px' id='layer-view'>
+    <view hidden='{{isTop}}' class='triangle-top'></view>
+    <view class='layer-content'>
+      <view catchtap='copy' class='layer-list'>复制</view>
+      <view catchtap='translate' class='layer-list'>翻译</view>
+    </view>
+    <view hidden='{{!isTop}}' class='triangle-bottom'></view>
+  </view>
+</view>
+<!-- 录音中 -->
+<image hidden="{{!isTape}}" class="tape" mode="widthFix" src="/images/tape.png" />

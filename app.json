@@ -1,0 +1,20 @@
+{
+  "pages": [
+    "pages/judge/judge",
+    "pages/login/login",
+    "pages/Home/Communication/Communication",
+    "component/chartVoice/chartVoice"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarBackgroundColor": "#0068b7",
+    "navigationBarTextStyle": "white"
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "小程序获取您的位置，用于更好的为您提供服务"
+    }
+  },
+  "sitemapLocation": "sitemap.json"
+}

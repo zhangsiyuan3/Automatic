@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "智能客服",
+  "enablePullDownRefresh": true,
+  "usingComponents": {
+    "chart-voice": "/component/chartVoice/chartVoice"
+  }
+}

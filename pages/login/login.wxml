@@ -1,0 +1,7 @@
+<!--pages/login/login.wxml-->
+<view class='anthor'>
+  <image src='/images/authorization.png'></image>
+</view>
+<button class='bottom' open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" disabled='{{bo_end}}'>
+    授权 登录
+  </button>

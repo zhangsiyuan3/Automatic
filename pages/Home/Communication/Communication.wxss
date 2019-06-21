@@ -1,0 +1,260 @@
+/* pages/New/onlineChart/index.wxss */
+
+view {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  position: relative;
+  top: 0;
+  left: 0;
+  padding-bottom: 100rpx;
+  box-sizing: border-box;
+}
+
+.core {
+  width: 100%;
+  padding: 0 30rpx;
+  margin-bottom: 50rpx;
+  margin-top: 50rpx;
+}
+
+.core-time {
+  display: flex;
+  justify-content: center;
+  font-size: 26rpx;
+  color: #939393;
+  margin-bottom: 50rpx;
+}
+
+.core-me {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  padding-left: 46rpx;
+}
+
+.core-box-me {
+  display: flex;
+  justify-content: flex-end;
+  width: 80%;
+}
+
+.core-box-you {
+  display: flex;
+  justify-content: flex-start;
+  width: 80%;
+}
+.core-chart-image{
+  max-width: 300rpx;
+  min-width: 50rpx;
+}
+.core-image {
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+.core-chart {
+  background-color: #b2d3fb;
+  font-size: 30rpx;
+  border-radius: 10rpx;
+  padding: 18rpx 40rpx;
+  color: #4f4f4f;
+  max-width: 90%;
+  word-wrap: break-word;
+  /* word-break: break-all; */
+}
+
+.core-right {
+  width: 40rpx;
+  height: 70rpx;
+  background: #b2d3fb;
+  overflow: hidden;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.core-right-1 {
+  width: 70rpx;
+  height: 70rpx;
+  position: absolute;
+  top: -46rpx;
+  left: -20rpx;
+  background-color: #f5f6f9;
+  transform: rotateZ(74deg);
+}
+
+.core-right-2 {
+  width: 70rpx;
+  height: 70rpx;
+  position: absolute;
+  top: 24rpx;
+  left: 4rpx;
+  background-color: #f5f6f9;
+  transform: rotateZ(40deg);
+}
+
+.core-you {
+  display: flex;
+  justify-content: flex-start;
+  width: 100%;
+  padding-right: 46rpx;
+}
+
+.core-you .core-chart {
+  background: #fff;
+}
+
+.core-left {
+  width: 40rpx;
+  height: 70rpx;
+  background: #fff;
+  overflow: hidden;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.core-left-1 {
+  width: 70rpx;
+  height: 70rpx;
+  position: absolute;
+  top: -46rpx;
+  left: -20rpx;
+  background-color: #f5f6f9;
+  transform: rotateZ(-74deg);
+}
+
+.core-left-2 {
+  width: 70rpx;
+  height: 70rpx;
+  position: absolute;
+  top: 30rpx;
+  left: -30rpx;
+  background-color: #f5f6f9;
+  transform: rotateZ(-46deg);
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100rpx;
+  background: #f5f6f9;
+  padding: 16rpx 30rpx;
+  display: flex;
+  align-items: center;
+  border-top: 1rpx solid #e7e7e7;
+}
+.footer-input-box{
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+}
+.footer-voice-box{
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border-radius: 10rpx;
+  font-size: 26rpx;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer input {
+  width: 100%;
+  box-sizing: border-box;
+  height: 100%;
+  border: 1px solid #acacac;
+  border-radius: 10rpx;
+  background: #fff;
+  padding: 0 20rpx;
+  font-size: 26rpx;
+}
+.footer image{
+  width: 50rpx;
+}
+.footer-voice{
+  margin-right: 20rpx;
+}
+.footer-add{
+  width: 49rpx;
+  margin-left: 20rpx;
+}
+
+.layer {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  display: flex;
+  align-items: flex-start;
+}
+
+#layer-view {
+  margin-left: 140rpx;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.layer-content {
+  display: flex;
+  align-items: center;
+  font-size: 30rpx;
+  background: #272727;
+  color: #fff;
+  border-radius: 10rpx;
+  padding: 10rpx 10rpx;
+  box-sizing: border-box;
+}
+
+.layer-list {
+  padding: 10rpx 30rpx;
+}
+
+.layer-content .layer-list:nth-child(1) {
+  border-right: 1px solid #fff;
+}
+
+.triangle-top {
+  width: 0;
+  height: 0;
+  border-left: 20rpx solid transparent;
+  border-right: 20rpx solid transparent;
+  border-bottom: 20rpx solid #272727;
+  position: relative;
+  margin-left: 45rpx;
+}
+
+.triangle-bottom {
+  width: 0;
+  height: 0;
+  border-left: 20rpx solid transparent;
+  border-right: 20rpx solid transparent;
+  border-top: 20rpx solid #272727;
+  position: relative;
+  margin-left: 45rpx;
+}
+
+.data-over{
+  padding-top: 50rpx;
+}
+.tape{
+  width: 200rpx;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}

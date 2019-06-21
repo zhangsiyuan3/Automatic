@@ -1,0 +1,14 @@
+/**app.wxss**/
+page{
+  background: #f5f6f9;
+  font-size: 26rpx;
+  box-sizing: border-box;
+}
+/*  暂无数据  */
+.noData {
+  width: 100%;
+  font-size: 38rpx;
+  text-align: center;
+  margin-top: 200rpx;
+  color: #888;
+}

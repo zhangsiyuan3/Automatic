@@ -1,0 +1,24 @@
+/* pages/login/login.wxss */
+page{
+  background: #fff;
+}
+.bottom{
+  width: 690rpx;
+  height: 90rpx;
+  line-height: 90rpx;
+  background: #0068b7;
+  color: #fff;
+  text-align: center;
+  margin: 10rpx auto;
+  border-radius: 10rpx;
+  font-size: 35rpx;
+}
+.anthor{
+  width: 280rpx;
+  height: 290rpx;
+  margin: 140rpx auto;
+}
+.anthor image{
+  width: 100%;
+  height: 100%;
+}

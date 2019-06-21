@@ -1,0 +1,28 @@
+/* component/chartVoice/chartVoice.wxss */
+.voice-image{
+    width: 50rpx;
+    line-height: 50rpx;
+}
+.box{
+    font-size: 30rpx;
+    line-height: 30rpx;
+    border-radius: 10rpx;
+    color: #4f4f4f;
+    width: 180rpx;
+    height: 70rpx;
+    display: flex;
+    align-items: center;
+}
+.right{
+    justify-content: flex-end;
+    padding-right: 20rpx;
+    background-color: #b2d3fb;
+}
+.left{
+    justify-content: flex-start;
+    padding-left: 20rpx;
+    background-color: #ffffff;
+}
+.left > image{
+    transform: rotateY(180deg);
+}
